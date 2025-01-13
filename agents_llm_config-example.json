@@ -25,10 +25,12 @@
 	},
     "openai_gpt": {
 		"planner_agent": {
-			"model_name": "gpt-4o",
-			"model_api_key": "sk-...",
-			"model_base_url": null,
-            "llm_config_params": {
+          "model_name": "gpt-4o-2024-05-13",
+          "model_api_key": "8XKV4NaZ2kU35JaobQrJVrEyjF0Hseme",
+          "model_base_url": "https://search.bytedance.net/gpt/openapi/online/v2/crawl",
+          "model_api_type": "azure",
+          "model_api_version": "2024-03-01-preview",
+          "llm_config_params": {
                 "cache_seed": null,
                 "temperature": 0.0,
                 "top_p": 0.001,
@@ -36,9 +38,11 @@
             }
 		},
 		"browser_nav_agent": {
-            "model_name": "gpt-4o",
-			"model_api_key": "sk-...",
-			"model_base_url": null,
+          "model_name": "gpt-4o-2024-05-13",
+          "model_api_key": "8XKV4NaZ2kU35JaobQrJVrEyjF0Hseme",
+          "model_base_url": "https://search.bytedance.net/gpt/openapi/online/v2/crawl",
+          "model_api_type": "azure",
+          "system_prompt": "You will perform web navigation tasks with the functions that you have...\nOnce a task is completed, confirm completion with ##TERMINATE TASK##.",
             "llm_config_params": {
                 "cache_seed": null,
                 "temperature": 0.0,

@@ -4,7 +4,7 @@ from datetime import datetime
 from string import Template
 from typing import Any
 
-import autogen  # type: ignore
+import autogen
 
 from ae.core.memory.static_ltm import get_user_ltm
 from ae.core.prompts import LLM_PROMPTS
