@@ -149,11 +149,11 @@ class AutogenWrapper:
         self.agents_map["user"].register_nested_chats( # type: ignore
             [
                 {
-            "sender": self.agents_map["browser_nav_executor"],
-            "recipient": self.agents_map["browser_nav_agent"],
-            "message":reflection_message,
-            "max_turns": self.browser_number_of_rounds,
-            "summary_method": my_custom_summary_method,
+                    "sender": self.agents_map["browser_nav_executor"],
+                    "recipient": self.agents_map["browser_nav_agent"],
+                    "message":reflection_message,
+                    "max_turns": self.browser_number_of_rounds,
+                    "summary_method": my_custom_summary_method,
                 }
             ],
             trigger=trigger_nested_chat, # type: ignore

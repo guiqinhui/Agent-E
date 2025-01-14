@@ -84,6 +84,8 @@ class SystemOrchestrator:
                 self.planner_agent_name = agent_name
             elif 'browser' in agent_name:
                 self.browser_agent_name = agent_name
+            elif 'app' in agent_name:
+                self.app_agent_name = agent_name
 
     async def initialize(self):
         """
@@ -97,8 +99,8 @@ class SystemOrchestrator:
         self.browser_nav_agent_config = llm_config.get_browser_nav_agent_config()
 
         self.autogen_wrapper = await AutogenWrapper.create(self.planner_agent_config, self.browser_nav_agent_config, agents_needed=self.agent_names,
-                                                           save_chat_logs_to_files=self.save_chat_logs_to_files,
-                                                           planner_max_chat_round=self.planner_number_of_rounds, browser_nav_max_chat_round=self.browser_number_of_rounds)
+                                                                       save_chat_logs_to_files=self.save_chat_logs_to_files,
+                                                                       planner_max_chat_round=self.planner_number_of_rounds, browser_nav_max_chat_round=self.browser_number_of_rounds)
 
         self.browser_manager = browserManager.PlaywrightManager(gui_input_mode=self.input_mode == "GUI_ONLY")
         await self.browser_manager.async_initialize()
